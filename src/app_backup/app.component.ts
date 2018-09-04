@@ -1,5 +1,4 @@
-import { Component } from '@angular/core'; 
-import { PropertySearchModule } from './property-search/property-search.module';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,5 @@ import { PropertySearchModule } from './property-search/property-search.module';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TestApp';
+  title = 'PrpUI';
 }

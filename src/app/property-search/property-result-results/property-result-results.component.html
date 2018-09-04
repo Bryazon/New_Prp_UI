@@ -1,0 +1,18 @@
+<div class="container-fluid" style="margin-bottom: 15px;">
+  <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" *ngFor="let result of propertyResults">
+                  
+        <div class='card' >
+          <img class="card-img-top img-fluid" src="{{result.mainImage.url}}" alt="Card image">
+          <div id="myCardBody">
+             <a href="#"> <h6 class="card-title">{{result.address.fullAddress}}</h6> </a>
+            <p class="card-text">For Sale - {{result.price | currency:'GBP':'symbol':'1.0'}}</p>
+
+          </div>
+          
+        </div>
+      </div>
+  </div>
+
+</div>
+ 

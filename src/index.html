@@ -2,13 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>PrpUI</title>
+  <title>TestApp</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body >
+    <nav id="mainBar" class="navbar navbar-expand-lg navbar-light bg-light py-0 my-0 nav-fill w-100">
+       <div class='container-fluid'>
+              
+        
+        <a class="navbar-brand" href="#"><img src="/assets/Reapit_House_RGB-01.svg" 
+               
+                  style="height:70px;"></a>
+         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+        <div class="collapse navbar-collapse " id="navbarNavDropdown">
+          <ul class="navbar-nav nav-fill mainNav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Organiser</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">Diary</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle " href="#">Property</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#">Applicant</a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#">Contacts</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">Lettings</a>
+                  </li>
+    
+          
+          </ul> 
+          <ul class="navbar-nav ml-auto mainNav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i style="padding-right:5px" class='fa fa-sign-out'></i>Sign out</a>
+            </li>   
+          </ul>
+        </div>
+
+       
+
+       </div>
+      </nav>
   <app-root></app-root>
 </body>
 </html>

@@ -25,7 +25,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "../PrpUI/node_modules/jquery/dist/jquery.min.js",
+              "../PrpUI/node_modules/popper.js/dist/umd/popper.min.js",
+              "../PrpUI/node_modules/bootstrap/dist/js/bootstrap.min.js"  
+            ]
           },
           "configurations": {
             "production": {

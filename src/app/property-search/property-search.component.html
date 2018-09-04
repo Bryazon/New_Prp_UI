@@ -1,0 +1,68 @@
+<div class="container-fluid bg-dark  py-2">
+    <div class='row'>
+        <div class='col col-xl-3 col-lg-4 col-md-5 col-sm-4 col-12  py-1'>
+            <div class="input-group ">
+                <input class="form-control py-2 border-right-0 border" [(ngModel)]="searchTerm" (keydown)="searchKeyDown($event)" type="search"
+                    placeholder="Search">
+                <span class="input-group-append">
+                    <div class="input-group-text bg-white " (click)="fireSearch()"><i class="fa fa-search"></i></div>
+                </span>
+            </div>
+        </div>
+
+        <div class='col py-1'>
+            <div class='row pl-3'>
+                <div class='form-inline'>
+                    <div class="dropdown">
+                        <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropDownMinPrice" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            {{minPrice ? (minPrice | currency:'GBP':'symbol':'1.0') : 'Min Price'}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownMinPrice">
+                            <div *ngIf="minPrice">
+                                <a class="dropdown-item" (click)="setMinPrice(0)" href="#">Clear</a>
+                                <div class="dropdown-divider"></div>
+                            </div>
+                            <div *ngFor="let price of priceArray">
+                                <a class="dropdown-item" (click)="setMinPrice(price)" href="#">{{price | currency:'GBP':'symbol':'1.0'
+                                    }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                    <p class='text-white my-2 mx-3'>to</p>
+          
+          
+                    <div class="dropdown">
+                        <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropDownMaxPrice" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            {{maxPrice ? (maxPrice | currency:'GBP':'symbol':'1.0') : 'Max Price'}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownMaxPrice">
+                            <div *ngIf="maxPrice">
+                                <a class="dropdown-item" (click)="setMaxPrice(0)" href="#">Clear</a>
+                                <div class="dropdown-divider"></div>
+                            </div>
+                            <div *ngFor="let price of priceArray">
+                                <a class="dropdown-item" *ngIf="price > minPrice" (click)="setMaxPrice(price)" href="#">{{price | currency:'GBP':'symbol':'1.0'
+                                    }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+         
+            </div>
+        </div>
+        <div class="col-auto py-1">
+                <button class="btn btn-primary btn-add-property" type="submit"><i class='fa fa-plus'></i> Add </button>
+
+            </div>
+    </div>
+</div>
+
+
+<div style="border: 1px solid lightgrey; background: #F4F4F5">
+    <app-property-result-results *ngIf="searchResult" [propertyResults]="searchResult"></app-property-result-results>
+</div>

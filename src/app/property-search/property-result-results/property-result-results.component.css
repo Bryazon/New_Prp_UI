@@ -1,0 +1,15 @@
+.card 
+{
+    margin-top: 15px; 
+}
+
+.card #myCardBody
+{
+    padding: 10px;
+}
+
+.card h6 {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
